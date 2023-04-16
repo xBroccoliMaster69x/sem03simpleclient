@@ -14,13 +14,8 @@ func main() {
 	}
     
 	log.Println("os.Args[1] = ", os.Args[1])
-        
-        // Krypter innholdet i os.Args[1]
-        kryptertMelding := mycrypt.Krypter([]rune(os.Args[1]), mycrypt.ALF_SEM03, 4)
-        log.Println(string(kryptertMelding))
 
-//	_, err = conn.Write([]byte(os.Args[1]))
-        _, err = conn.Write([]byte(string(kryptertMelding)))
+ 	_, err = conn.Write([]byte(os.Args[1]))
 	if err != nil {
 		log.Fatal(err)
 	}
