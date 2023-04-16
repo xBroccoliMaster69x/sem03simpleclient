@@ -4,7 +4,6 @@ import (
 	"net"
 	"log"
 	"os"
-        "github.com/uia-worker/is105sem03/mycrypt"
 )
 
 func main() {
